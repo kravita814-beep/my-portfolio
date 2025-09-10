@@ -168,7 +168,7 @@
   position: relative;
   margin: 3rem auto;
   padding: 2rem 0;
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 .timeline::before {
@@ -204,7 +204,6 @@
   background: #1e293b;
   padding: 1.5rem;
   border-radius: 12px;
-  position: relative;
   transition: 0.3s;
 }
 
@@ -222,7 +221,6 @@
   margin-left: 1rem;
   list-style: disc;
   color: #cbd5e1;
-  text-align: left;
 }
 
 .timeline-item.left .timeline-content {
@@ -265,4 +263,36 @@
 @keyframes fadeInRight {
   0% { opacity: 0; transform: translateX(50px); }
   100% { opacity: 1; transform: translateX(0); }
+}
+
+/* ✅ RESPONSIVE FIX */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 8px; /* move line to left */
+
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    text-align: left !important;
+    left: 0 !important;
+  }
+
+  .timeline-item.right {
+    left: 0; /* remove zigzag on small screen */
+  }
+
+  .timeline-item::before {
+    left: 0;
+  }
+
+  .timeline-content {
+    margin: 0 0 2rem 0 !important;
+  }
+  .hero h2 
+  {
+    font-size: 2rem;
+  }
 }
