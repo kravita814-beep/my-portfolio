@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ravi – Web Designer & WordPress Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Ravita</h1>
+    <nav>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="status-badge">Available for freelance • 2025</div>
+      <h2>Hi, I'm <span>Ravita</span> —<br> a Web Designer & WordPress Developer.</h2>
+      <div class="typing" id="typing"></div>
+      <p>
+        Creative and detail-oriented Web Designer and WordPress Developer with 3+ years of experience designing and developing responsive, SEO-friendly, and user-centric websites. Skilled in front-end technologies, WordPress/WooCommerce, SEO practices, and mobile-first development.
+      </p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">WordPress</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">SEO</div>
+      <div class="skill">Figma (UI/UX)</div>
+      <div class="skill">Performance Optimization</div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+ <!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>Blue Moon Technologies <span>(2022–2024)</span></h3>
+        <ul>
+          <li>Crafted visually engaging website layouts aligned with brand identity</li>
+          <li>Developed custom WordPress themes and plugins</li>
+          <li>Handled classified ad posting and local SEO campaigns</li>
+          <li>Provided ongoing technical support and maintenance</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3>Global Trendz <span>(2024–2025)</span></h3>
+        <ul>
+          <li>Designed and maintained dynamic websites using WordPress CMS</li>
+          <li>Implemented responsive, mobile-first designs with HTML, CSS, JS & Bootstrap</li>
+          <li>Performed SEO optimization and backlinking for client websites</li>
+          <li>Managed domain, hosting, and WordPress installations</li>
+          <li>Integrated and managed e-commerce functionality using WooCommerce</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project"><a href="https://leadelan.com/" target="_blank">Leadelan</a></div>
+      <div class="project"><a href="https://nuventures.vc/" target="_blank">NuVentures</a></div>
+      <div class="project"><a href="https://rgpatil.com/" target="_blank">RG Patil</a></div>
+      <div class="project"><a href="https://notoutcollectionsports.in/" target="_blank">Notout Collection</a></div>
+      <div class="project"><a href="https://www.audrixs.com/" target="_blank">Audrixs</a></div>
+      <div class="project"><a href="https://www.suknit.com/" target="_blank">Suknit</a></div>
+      <div class="project"><a href="https://bellamadonnasalon.com/" target="_blank">Bella Madonna Salon</a></div>
+      <div class="project"><a href="https://drvtnephro.com/" target="_blank">DRVT Nephro</a></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;">📧 Email: kravita814@gmail.com</p>
+    <p style="text-align:center;">💼 LinkedIn / GitHub profiles here</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Ravi | Web Designer & WordPress Developer</p>
+  </footer>
+
+  <!-- TYPING SCRIPT -->
+  <script>
+    const roles = ["Web Designer", "WordPress Developer", "SEO Specialist", "UI/UX Enthusiast"];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let typingDiv = document.getElementById("typing");
+    let deleting = false;
+
+    function typeEffect() {
+      let current = roles[roleIndex];
+      if (!deleting) {
+        typingDiv.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(typeEffect, 1500);
+          return;
+        }
+      } else {
+        typingDiv.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          deleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+        }
+      }
+      setTimeout(typeEffect, deleting ? 80 : 120);
+    }
+    typeEffect();
+  </script>
+
+</body>
+</html>
